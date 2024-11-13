@@ -2,10 +2,7 @@
 #!desc=芬空间会员解锁
 
 [rewrite_local]
-^https?:\/\/api\.zhangdefenspace\.com\/api\/(course\/getCoursePeriodList|course\/getCourseDetails|user\/getIndexUser|v2\/live\/getLiveDetails).*$ url script-response-body https://raw.githubusercontent.com/zhaikong/QuantumultX-Scripts/refs/heads/main/fkj.js
+^https?:\/\/api\.zhangdefenspace\.com\/api\/(course\/getCoursePeriodList|course\/getCourseDetails|user\/getIndexUser|v2\/live\/getLiveDetails|video\/getPlayAuth).*$ url script-response-body https://raw.githubusercontent.com/zhaikong/QuantumultX-Scripts/refs/heads/main/fkj.js
 
 [mitm]
-hostname = api.zhangdefenspace.com
-
-[Script]
-芬空间会员 = type=http-response,pattern=^https?:\/\/api\.zhangdefenspace\.com\/api\/(course\/getCoursePeriodList|course\/getCourseDetails|user\/getIndexUser|v2\/live\/getLiveDetails).*$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/zhaikong/QuantumultX-Scripts/refs/heads/main/fkj.js 
+hostname = api.zhangdefenspace.com 
